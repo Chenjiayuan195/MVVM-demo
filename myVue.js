@@ -27,7 +27,6 @@ class myVue{
         set(newValue){
           if(newValue!=value){
             value=newValue;
-            debugger;
             _this._binding[key]._watcherList.forEach((item)=>{ //有值更新对应更新watcher的update
               item.update();
             })
