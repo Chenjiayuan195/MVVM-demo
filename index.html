@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <div id="app">
+    <input type="text" v-model='value'>
+    <span>{{value}}</span>
+  </div>
+  <script src="myVue.js"></script>
+  <script type="text/javascript">
+    var vm = new myVue({
+      el:'#app',
+      data:{
+        value:''
+      }
+    })
+    setTimeout(function(){vm.$data.value=20},2000);
+  </script>
+  </body>
+</html>
