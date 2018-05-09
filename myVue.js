@@ -13,7 +13,7 @@ class myVue{
     for(var key in _data){
       let value;
       if(typeof _data[key]==='object'){
-        _observe(_data[key]) //递归直到不为对象为止
+        _this._observe(_data[key]) //递归直到不为对象为止
       }
       _this._binding[key]={  //此处将当前key值存入对象中，用于watcher绑定
         _watcherList:[]
