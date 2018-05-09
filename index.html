@@ -6,18 +6,21 @@
   </head>
   <body>
   <div id="app">
-    <input type="text" v-model='value'>
-    <span>{{value}}</span>
+    <input type="text" v-model='value.input'>
+    <span>{{value.input}}</span>
   </div>
   <script src="myVue.js"></script>
   <script type="text/javascript">
     var vm = new myVue({
       el:'#app',
       data:{
-        value:''
+        input:'',
+        value:{
+          input:''
+        },
       }
     })
-    setTimeout(function(){vm.$data.value=20},2000);
+    setTimeout(function(){vm.$data.value.input=20},2000);
   </script>
   </body>
 </html>
